@@ -1,0 +1,161 @@
+/* Reset & Variables */
+:root {
+  /* Classic Emerald Theme (Default) */
+  --bg: #0b0f19;
+  --card-bg: rgba(20, 28, 48, 0.8);
+  --card-border: rgba(45, 212, 191, 0.15);
+  --input-bg: #111827;
+  --input-border: #374151;
+  --input-text: #f8fafc;
+  --input-icon: #94a3b8;
+  --accent: #2dd4bf;
+  --accent-hover: #14b8a6;
+  --accent-glow: rgba(45, 212, 191, 0.4);
+  --accent-text: #0f172a;
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --error-color: #f87171;
+  --error-bg: rgba(248, 113, 113, 0.1);
+  --focus-outline: #2dd4bf;
+  --result-bg: #0f172a;
+  --result-label: #94a3b8;
+  --result-value: #2dd4bf;
+  --result-secondary: #5eead4;
+  --reset-bg: #2dd4bf;
+  --reset-hover: #5eead4;
+  --reset-text: #0f172a;
+
+  --sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'Space Grotesk', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+  background-color: var(--bg);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+/* Neon Amethyst Theme (Cyberpunk Purple) */
+.theme-amethyst {
+  --bg: #090514;
+  --card-bg: rgba(22, 14, 42, 0.85);
+  --card-border: rgba(217, 70, 239, 0.2);
+  --input-bg: #130a24;
+  --input-border: #3b2a59;
+  --input-text: #fafafa;
+  --input-icon: #a78bfa;
+  --accent: #d946ef;
+  --accent-hover: #c084fc;
+  --accent-glow: rgba(217, 70, 239, 0.45);
+  --accent-text: #ffffff;
+  --text-primary: #fafafa;
+  --text-muted: #a78bfa;
+  --error-color: #f43f5e;
+  --error-bg: rgba(244, 63, 94, 0.1);
+  --focus-outline: #e879f9;
+  --result-bg: #06020e;
+  --result-label: #a78bfa;
+  --result-value: #d946ef;
+  --result-secondary: #f472b6;
+  --reset-bg: #d946ef;
+  --reset-hover: #f472b6;
+  --reset-text: #ffffff;
+}
+
+/* Ultra-Clean Light Contrast Theme */
+.theme-light {
+  --bg: #f1f5f9;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-border: rgba(79, 70, 229, 0.15);
+  --input-bg: #f8fafc;
+  --input-border: #cbd5e1;
+  --input-text: #0f172a;
+  --input-icon: #64748b;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-glow: rgba(79, 70, 229, 0.3);
+  --accent-text: #ffffff;
+  --text-primary: #0f172a;
+  --text-muted: #64748b;
+  --error-color: #dc2626;
+  --error-bg: rgba(220, 38, 38, 0.08);
+  --focus-outline: #4f46e5;
+  --result-bg: #f1f5f9;
+  --result-label: #374151;
+  --result-value: #1f2937;
+  --result-secondary: #7dd3fc;
+  --reset-bg: #38bdf8;
+  --reset-hover: #7dd3fc;
+  --reset-text: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  background-image: 
+    radial-gradient(at 0% 0%, var(--bg) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, var(--accent-glow) 0px, transparent 60%);
+  background-attachment: fixed;
+  padding: 20px;
+  overflow-y: auto;
+  transition: background-color 0.4s ease;
+}
+
+/* Accessibility Focus States */
+:focus-visible {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 4px;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* Ensure outline is visible when navigating by keyboard */
+input:focus-visible,
+button:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+
+#root {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--input-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
