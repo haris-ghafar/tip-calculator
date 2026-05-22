@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import BillInput from './billinput.jsx'
-import PeopleInput from './peopleinput.jsx'
-import TipSelector from './tipselector.jsx'
-import ResultPanel from './resultpanel.jsx'
+import BillInput from "./BillInput.jsx";
+import PeopleInput from "./PeopleInput.jsx";
+import TipSelector from "./TipSelector.jsx";
+import ResultPanel from "./ResultPanel.jsx";
 import './App.css'
 
 function App() {
